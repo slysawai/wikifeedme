@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <title>WikiFeedMe</title>
+    <meta name="robots" content="nofollow"/>
+    {% load staticfiles %}
+    <link rel="shortcut icon" href="{% static "wikifeedme/favicon.ico" %}" />
+    <link type="text/css" rel="stylesheet" href="{% static "wikifeedme/main.css" %}" />
+    <!--<link href='http://fonts.googleapis.com/css?family=Rouge+Script' rel='stylesheet' type='text/css'>-->
+    <style type='text/css'>
+        @import url(http://weloveiconfonts.com/api/?family=fontelico);
+        [class*="fontelico-"]:before {
+            font-family: 'fontelico', sans-serif;
+        }
+
+        @font-face {
+            font-family: 'Great Vibes';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Great Vibes'), local('GreatVibes-Regular'), url({% static "wikifeedme/6q1c0ofG6NKsEhAc2eh-3YbN6UDyHWBl620a-IRfuBk.woff" %}) format('woff');
+        }
+        @font-face {
+            font-family: 'Arapey';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Arapey Regular'), local('Arapey-Regular'), url({% static "wikifeedme/hTZBMDBEmuM7E6AJpWkyGA.woff" %}) format('woff');
+        }
+        /*@font-face {
+            font-family: 'Lovers Quarrel';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Lovers Quarrel'), local('LoversQuarrel-Regular'), url({% static "wikifeedme/gipdZ8b7pKb89MzQLAtJHGjFZxIsbLQU7tGBbP55JRc.woff" %}) format('woff');
+        }*/
+    </style>
+</head>
+<body>
+
+<p style="text-align: right"><a href="../about">Über</a></p>
+
+<!--
+<p><span class="number">1.</span> Folgende Speisen hat das Wiki-Orakel für Dich ausgesucht.<br/>
+Suche die Rezepte und bereite die Speisen zu:</p>
+
+<div class="main">
+
+    <div class="type">
+        Vorspeise
+    </div>
+    <div class="course">
+        <a href="{{starterUrl}}">{{starterName}}</a> <span class="chefkoch"> <a href="http://www.chefkoch.de/suche.php?suche={{starterName|urlencode}}&amp;wo=2">Chefkoch.de</a></span>
+    </div>
+
+    <div class="type">
+        Hauptgericht
+    </div>
+    <div class="course">
+        <a href="{{mainCourseUrl}}">{{mainCourseName}}</a> <span class="chefkoch"><a href="http://www.chefkoch.de/suche.php?suche={{mainCourseName|urlencode}}&amp;wo=2">Chefkoch.de</a></span>
+    </div>
+
+    <div class="type">
+        Dessert
+    </div>
+    <div class="course">
+        <a href="{{dessertUrl}}">{{dessertName}}</a> <span class="chefkoch"><a href="http://www.chefkoch.de/suche.php?suche={{dessertName|urlencode}}&amp;wo=2">Chefkoch.de</a></span>
+    </div>
+
+    <div style="margin-top: 30px;margin-left: 12px">
+        <a href="?{{randomNumber}}"><span class="fontelico-spin3"></span> Neue Vorschläge</a>
+    </div>
+
+</div>
+
+
+<p><span class="number">2.</span> Fotografiere Deine Speisen.</p>
+
+<p><span class="number">3.</span> Verspeise Deine Speisen.</p>
+
+<p><span class="number">4.</span> Lade die Bilder Deiner Speisen
+    <a href="https://commons.wikimedia.org/wiki/Special:UploadWizard?setlang=de">auf Wikimedia Commons</a> hoch<br/>und binde sie in der Wikipedia ein.</p>
+-->
+
+<ol>
+
+<li>
+    <p>Folgende Speisen hat das Wiki-Orakel für Dich ausgesucht.<br/>
+        Suche die Rezepte und bereite die Speisen zu:</p>
+
+    <div class="main">
+
+        <div class="type">
+            Vorspeise
+        </div>
+        <div class="course">
+            <a href="{{starterUrl}}">{{starterName}}</a> <span class="chefkoch"> <a href="https://www.google.de/search?q={{starterName|urlencode}}+Rezept&amp;wo=2&amp;ie=utf-8&amp;oe=utf-8">Google</a></span>
+        </div>
+
+        <div class="type">
+            Hauptgericht
+        </div>
+        <div class="course">
+            <a href="{{mainCourseUrl}}">{{mainCourseName}}</a> <span class="chefkoch"><a href="https://www.google.de/search?q={{mainCourseName|urlencode}}+Rezept&amp;wo=2&amp;ie=utf-8&amp;oe=utf-8">Google</a></span>
+        </div>
+
+        <div class="type">
+            Dessert
+        </div>
+        <div class="course">
+            <a href="{{dessertUrl}}">{{dessertName}}</a> <span class="chefkoch"><a href="https://www.google.de/search?q={{dessertName|urlencode}}+Rezept&amp;wo=2&amp;ie=utf-8&amp;oe=utf-8">Google</a></span>
+        </div>
+
+        <div style="margin-top: 30px;margin-left: 12px">
+            <a href="?{{randomNumber}}"><span class="fontelico-spin3"></span> Neue Vorschläge</a>
+        </div>
+
+    </div>
+
+</li>
+
+<li><p>Fotografiere Deine Speisen.</p></li>
+
+<li><p>Verspeise Deine Speisen.</p></li>
+
+<li><p>Lade die Bilder Deiner Speisen
+    <a href="https://commons.wikimedia.org/wiki/Special:UploadWizard?setlang=de">auf Wikimedia Commons</a> hoch<br/>und binde sie in der Wikipedia ein.</p></li>
+</ol>
+
+
+
+</body>
+</html>
