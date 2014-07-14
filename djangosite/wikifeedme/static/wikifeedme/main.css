@@ -83,3 +83,12 @@ ol {
 ol p {
     font-weight: normal;
 }
+
+@media (max-width: 800px) {
+
+    body {
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
