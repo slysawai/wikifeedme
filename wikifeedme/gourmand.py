@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 import sqlite3
 import random
@@ -69,7 +70,10 @@ def getPagesWithNoPictures(start):
     pagesWithNoPictures = [] 
     for page in pages:
         if wikiCrawler.foundNoPicturesIn(page):
+            print u"No images:", page.encode('utf-8')
             pagesWithNoPictures.append((wikiCrawler.generateLinkFromTitle(page), page))
+        else:
+            print u"Has images, ignoring page:",  page.encode('utf-8')
     return pagesWithNoPictures
 
 def getRandomDish(kind):
