@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 from lxml import html, etree
 import re
 import urllib
@@ -9,15 +12,19 @@ catQuery = "list=categorymembers&format=xml&cmlimit=max&cmtitle="
 imgQuery = "prop=revisions&rvlimit=1&rvprop=content&format=xml&titles="
 
 def openUrl(url):
+    print "Getting " + url
     request=urllib2.Request(url)
     request.add_header("User-Agent","http://wikifeedme.openthesaurus.de/")
     try:
         page=urllib2.urlopen(request)
     except urllib2.HTTPError as e:
+        print "ERROR urllib2.HTTPError for " + url + ": " + e
         page=e
     except httplib.BadStatusLine:
+        print "ERROR httplib.BadStatusLine for " + url
         page="<nopage></nopage>"
     except urllib2.URLError:
+        print "ERROR urllib2.URLError for " + url
         page="<nopage></nopage>"
     return page
     
@@ -50,8 +57,13 @@ def getPageLinks(root):
 
 def foundNoPicturesIn(title):
     query = apiQuery+imgQuery+quote(title)
-    pix = etree.parse(openUrl(query)).xpath(
+    content = openUrl(query)
+    parseResult = etree.parse(content)
+    #print "=================================================="
+    #print parseResult
+    pix = parseResult.xpath(
         '//rev [contains(text(), "Image:") or (contains(text(), "Bild:")) or (contains(text(), "Datei:")) or (contains(text(), "File:"))]')
+    print "pix: ", len(pix)
     return pix == []
 
 def generateLinkFromTitle(title):
@@ -60,3 +72,7 @@ def generateLinkFromTitle(title):
 def quote(title):
     return urllib.quote(title.encode("utf-8"))
 
+# for debugging:
+#if __name__=="__main__":
+#   #foundNoPicturesIn("Dessert")
+#   foundNoPicturesIn(u"Steckrübeneintopf")
