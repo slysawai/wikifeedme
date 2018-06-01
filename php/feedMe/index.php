@@ -34,7 +34,7 @@ function printCount($type, $db) {
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style type='text/css'>
-    @import url(http://weloveiconfonts.com/api/?family=fontelico);
+    /*@import url(http://weloveiconfonts.com/api/?family=fontelico);*/
     [class*="fontelico-"]:before {
       font-family: 'fontelico', sans-serif;
     }
