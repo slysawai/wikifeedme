@@ -11,7 +11,7 @@ starters = [u"Kategorie:Salat",
 mainCourses = [u"Kategorie:Gemüsegericht",
             u"Kategorie:Käsegericht",
             u"Kategorie:Kartoffelgericht",
-            u"Kategorie:Nudelgericht",
+            u"Kategorie:Speise_aus_Teigwaren",
             u"Kategorie:Reisgericht",
             u"Kategorie:Fondue",
             u"Kategorie:Fleischgericht",
@@ -70,10 +70,10 @@ def getPagesWithNoPictures(start):
     pagesWithNoPictures = [] 
     for page in pages:
         if wikiCrawler.foundNoPicturesIn(page):
-            print u"No images:", page.encode('utf-8')
+            print(u"No images:", page.encode('utf-8'))
             pagesWithNoPictures.append((wikiCrawler.generateLinkFromTitle(page), page))
         else:
-            print u"Has images, ignoring page:",  page.encode('utf-8')
+            print(u"Has images, ignoring page:", page.encode('utf-8'))
     return pagesWithNoPictures
 
 def getRandomDish(kind):
@@ -86,10 +86,10 @@ def getRandomDish(kind):
 
 
 def printRecommendation(menu):
-    print "Empfehlung des Chefs!\nVorspeise: %s\nHauptspeise: %s\nNachtisch: %s\n"%(
-        menu[0][2], menu[1][2], menu[2][2])
-    print u"\n... Und eine Käseplatte aus würzigem %s, sahnigem %s, und %s nach altem schweizer Rezept."%(
-        menu[3][0][2], menu[3][1][2], menu[3][2][2])
+    print("Empfehlung des Chefs!\nVorspeise: %s\nHauptspeise: %s\nNachtisch: %s\n"%(
+        menu[0][2], menu[1][2], menu[2][2]))
+    print(u"\n... Und eine Käseplatte aus würzigem %s, sahnigem %s, und %s nach altem schweizer Rezept."%(
+        menu[3][0][2], menu[3][1][2], menu[3][2][2]))
         
     
 
