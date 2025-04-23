@@ -21,7 +21,7 @@
       text-align: center;
     }
   </style>
-  <?php require("../analytics.php") ?>
+  <?php require("analytics.php") ?>
 </head>
 <body>
 
