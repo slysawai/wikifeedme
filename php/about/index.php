@@ -28,9 +28,11 @@
   Daniel Naber - frontend
 </p>
 
-<p><a href="https://github.com/slysawai/wikifeedme">Source code at github</a></p>
+<h2>Datenschutzerklärung</h2>
 
-<iframe frameborder="no" width="600px" height="200px" src="http://openthesaurus.stats.mysnip-hosting.de/index.php?module=CoreAdminHome&action=optOut&language=de"></iframe>
+<p>Diese Website speichert keine personenbezogenen Daten. Ihre IP-Adresse wird in einer gekürzten Form gespeichert (z.B. 192.168.x.x), die einen Bezug zu Ihrer Person unmöglich macht.</p>
+
+<p><a href="https://github.com/slysawai/wikifeedme">Sourcecode bei GitHub.</a></p>
 
 <p><a href="../feedMe">zurück</a></p>
 

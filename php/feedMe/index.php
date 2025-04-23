@@ -27,7 +27,7 @@ function printCount($type, $db) {
 <!doctype html>
 <html lang="de">
 <head>
-  <title>WikiFeedMe</title>
+  <title>WikiFeedMe - Zufalls-Rezepte</title>
   <meta name="robots" content="nofollow"/>
   <link rel="shortcut icon" href="../static/wikifeedme/favicon.ico" />
   <link type="text/css" rel="stylesheet" href="../static/wikifeedme/main.css" />
