@@ -20,6 +20,7 @@
       margin-top: 100px;
     }
   </style>
+  <?php require("../analytics.php") ?>
 </head>
 <body>
 
@@ -35,8 +36,6 @@
 <p><a href="https://github.com/slysawai/wikifeedme">Sourcecode bei GitHub.</a></p>
 
 <p><a href="../feedMe">zurück</a></p>
-
-<?php require("../analytics.php") ?>
 
 </body>
 </html>

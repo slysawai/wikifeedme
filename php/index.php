@@ -21,6 +21,7 @@
       text-align: center;
     }
   </style>
+  <?php require("../analytics.php") ?>
 </head>
 <body>
 
@@ -30,8 +31,6 @@
 </p>
 
 <a href="feedMe" class="mainButton">Zufallsmenü zusammenstellen</a>
-
-<?php require("analytics.php") ?>
 
 </body>
 </html>

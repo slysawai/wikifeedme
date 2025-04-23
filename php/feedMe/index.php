@@ -51,6 +51,7 @@ function printCount($type, $db) {
       src: local('Arapey Regular'), local('Arapey-Regular'), url(../static/wikifeedme/hTZBMDBEmuM7E6AJpWkyGA.woff) format('woff');
     }
   </style>
+  <?php require("../analytics.php") ?>
 </head>
 <body>
 
@@ -107,8 +108,6 @@ function printCount($type, $db) {
   <li><p>Lade die Bilder Deiner Speisen
       <a href="https://commons.wikimedia.org/wiki/Special:UploadWizard?setlang=de">auf Wikimedia Commons</a> hoch<br/>und binde sie in der Wikipedia ein.</p></li>
 </ol>
-
-<?php require("../analytics.php") ?>
 
 </body>
 </html>
