@@ -5,13 +5,15 @@ from django.template import Context, loader
 import time
 import gourmand
 
+
 def index(request):
     template = loader.get_template('wikifeedme/index.html')
     return HttpResponse(template.render(Context()))
 
+
 def feedMe(request):
     template = loader.get_template('wikifeedme/fuetterung.html')
-    randomMenu = gourmand.spitItOut()
+    randomMenu = gourmand.spit_it_out()
     context = Context({
             'starterUrl': randomMenu[0][1],
             'starterName': randomMenu[0][2],
@@ -22,6 +24,7 @@ def feedMe(request):
             'randomNumber': time.time(),
         })
     return HttpResponse(template.render(context))
+
 
 def about(request):
     template = loader.get_template('wikifeedme/about.html')
