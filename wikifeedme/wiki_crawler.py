@@ -3,6 +3,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import http.client
+import time
 
 from lxml import etree
 
@@ -12,6 +13,7 @@ imgQuery = "prop=revisions&rvlimit=1&rvprop=content&format=xml&titles="
 
 
 def open_url(url):
+    time.sleep(1)
     print("Getting " + url)
     request = urllib.request.Request(url)
     request.add_header("User-Agent", "http://wikifeedme.openthesaurus.de/")
@@ -66,7 +68,11 @@ def get_page_links(root):
 def found_no_pictures_in(title):
     query = apiQuery + imgQuery + quote(title)
     content = open_url(query)
-    parse_result = etree.parse(content)
+    try:
+        parse_result = etree.parse(content)
+    except etree.XMLSyntaxError:
+        print("ERROR: XMLSyntaxError for " + query)
+        return False
     redirect = parse_result.xpath(
         '//rev[starts-with(text(), "#WEITERLEITUNG") '
         'or starts-with(text(), "#redirect") '
