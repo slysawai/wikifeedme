@@ -5,7 +5,8 @@ import wiki_crawler
 
 starters = [u"Kategorie:Salat",
             u"Kategorie:Suppe",
-            u"Kategorie:Vorspeise"]
+            u"Kategorie:Vorspeise",
+           ]
 mainCourses = [u"Kategorie:Gemüsegericht",
                u"Kategorie:Käsegericht",
                u"Kategorie:Kartoffelgericht",
@@ -14,7 +15,10 @@ mainCourses = [u"Kategorie:Gemüsegericht",
                u"Kategorie:Fondue",
                u"Kategorie:Fleischgericht",
                u"Kategorie:Fischgericht",
-               u"Kategorie:Eierspeise"]
+               u"Kategorie:Eierspeise",
+               u"Kategorie:Brotgericht",
+               u"Kategorie:Speise_aus_Getreideprodukten",
+              ]
 sides = [u"Kategorie:Beilage"]
 desserts = [u"Kategorie:Süßspeise"]
 cheeses = [u"Kategorie:Käsesorte"]
