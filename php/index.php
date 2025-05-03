@@ -1,3 +1,10 @@
+<?php
+if (isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] !== "/") {
+  http_response_code(404);
+  echo "404 Not Found";
+  exit();
+}
+?>
 <!doctype html>
 <html lang="de">
 <head>
